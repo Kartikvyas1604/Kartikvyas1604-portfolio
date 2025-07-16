@@ -1,13 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { ThemeProvider } from "@/components/ThemeProvider"
+import { ThemeToggle } from "@/components/ThemeToggle"
+import { Hero } from "@/components/Hero"
+import { About } from "@/components/About"
+import { Projects } from "@/components/Projects"
+import { Skills } from "@/components/Skills"
+import { Contact } from "@/components/Contact"
+import { Footer } from "@/components/Footer"
+import { TerminalButton } from "@/components/Terminal"
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
+      <div className="min-h-screen bg-background text-foreground">
+        <ThemeToggle />
+        <TerminalButton />
+        
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Skills />
+          <Contact />
+        </main>
+        
+        <Footer />
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 
