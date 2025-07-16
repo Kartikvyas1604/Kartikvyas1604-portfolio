@@ -4,9 +4,9 @@ import { Meteors } from "./Meteors"
 
 export function Footer() {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/kartikvyas", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/kartikvyas", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/kartikvyas", label: "Twitter" },
+    { icon: Github, href: "https://github.com/Kartikvyas1604", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/kartikvyas1604", label: "LinkedIn" },
+    { icon: Twitter, href: "https://twitter.com/Kartikvyas1604", label: "Twitter" },
     { icon: Mail, href: "mailto:kartik@example.com", label: "Email" },
   ]
 
