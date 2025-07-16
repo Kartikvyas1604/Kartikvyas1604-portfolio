@@ -5,9 +5,9 @@ import { Meteors } from "./Meteors"
 export function Footer() {
   const socialLinks = [
     { icon: Github, href: "https://github.com/Kartikvyas1604", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/kartikvyas1604", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/Kartikvyas1604", label: "Twitter" },
-    { icon: Mail, href: "mailto:kartik@example.com", label: "Email" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/kartik-vyas-7183b8238", label: "LinkedIn" },
+    { icon: Twitter, href: "https://x.com/0xKartikvyas", label: "Twitter" },
+    { icon: Mail, href: "mailto:vkartik013@gmail.com", label: "Email" },
   ]
 
   return (
@@ -49,9 +49,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="border-t border-border/50 pt-6">
             <p className="text-muted-foreground flex items-center justify-center gap-2">
-              © 2024 Kartik Vyas. Built with
-              <Heart className="h-4 w-4 text-red-500 fill-current" />
-              using React, TypeScript & Supabase
+              © 2024 Kartik Vyas. Built with <Heart className="h-4 w-4 text-red-500" /> and lots of coffee
             </p>
           </div>
         </div>

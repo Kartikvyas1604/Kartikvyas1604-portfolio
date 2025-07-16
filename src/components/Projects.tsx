@@ -10,30 +10,30 @@ gsap.registerPlugin(ScrollTrigger)
 const projects = [
   {
     id: 1,
-    title: "Praman",
-    description: "Blockchain certificate generator & verifier using smart contracts to ensure authenticity and prevent fraud.",
-    tech: ["Solidity", "React", "Web3.js", "IPFS", "Ethereum"],
-    github: "https://github.com/kartikvyas/praman",
-    demo: "https://praman-demo.vercel.app",
-    image: "🎓"
+    title: "Fit-Pro",
+    description: "A personalized fitness app that uses AI to create custom workout plans.",
+    tech: ["React", "Firebase", "Tailwind CSS", "OpenAI API"],
+    github: "https://github.com/Kartikvyas1604/Fitpro",
+    demo: "https://fitpro-six.vercel.app/",
+    image: "🏋️‍♂️"
   },
   {
     id: 2,
     title: "NeuraOS",
     description: "AI-powered web-based operating system with virtual desktop environment and integrated AI assistant.",
     tech: ["React", "TypeScript", "OpenAI API", "WebRTC", "PWA"],
-    github: "https://github.com/kartikvyas/neuraos",
-    demo: "https://neuraos.vercel.app",
+    github: "https://github.com/Kartikvyas1604/NeuraOS",
+    demo: "https://neura-os.vercel.app/",
     image: "🧠"
   },
   {
     id: 3,
-    title: "Solana Ghost Game",
-    description: "Multiplayer ghost hunting game built on Solana blockchain with real-time gameplay and NFT rewards.",
-    tech: ["Rust", "Solana", "Anchor", "React", "WebSocket"],
-    github: "https://github.com/kartikvyas/solana-ghost-game",
-    demo: "https://ghost-game-solana.vercel.app",
-    image: "👻"
+    title: "Scroll Fund",
+    description: "A onchain profile making like buy me a coffee.",
+    tech: ["Scroll", "Ethereum", "EVM", "React", "WebSocket"],
+    github: "https://github.com/Kartikvyas1604/Scroll-Fund",
+    demo: "https://scrollfund.vercel.app/",
+    image: "💰"
   }
 ]
 

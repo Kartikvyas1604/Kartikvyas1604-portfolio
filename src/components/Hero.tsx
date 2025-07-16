@@ -79,10 +79,10 @@ export function Hero() {
                   className="bg-gradient-to-r from-primary to-accent hover:scale-105 transition-transform"
                   asChild
                 >
-                  <a href="/Kartik-Vyas-CV.pdf" download>
+                    <a href="https://drive.google.com/uc?export=download&id=123XJ8BEqMeBl8tpMJZ9oVUCMfqpqPR1B" download>
                     <Download className="mr-2 h-4 w-4" />
                     Download CV
-                  </a>
+                    </a>
                 </Button>
                 
                 <Button
@@ -122,7 +122,7 @@ export function Hero() {
                   asChild
                 >
                   <a
-                    href="https://www.linkedin.com/in/kartikvyas1604"
+                    href="https://www.linkedin.com/in/kartik-vyas-7183b8238"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn Profile"
@@ -138,7 +138,7 @@ export function Hero() {
                   asChild
                 >
                   <a
-                    href="https://twitter.com/Kartikvyas1604"
+                    href="https://x.com/0xKartikvyas"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Twitter Profile"

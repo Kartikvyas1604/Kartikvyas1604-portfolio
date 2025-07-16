@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+# 🧑‍💻 Kartik Vyas – Personal Developer Portfolio
 
-## Project info
+Hey there! 👋  
+Welcome to my personal portfolio website – a space where I introduce myself as a passionate developer, share what I do, and connect with awesome people like you! 🚀
 
-**URL**: https://lovable.dev/projects/3eb8fd07-572f-4712-8f3e-51311144db95
+---
 
-## How can I edit this code?
+## 🌐 Live Portfolio
 
-There are several ways of editing your application.
+🔗 [Visit My Website](https://your-portfolio-link.com)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3eb8fd07-572f-4712-8f3e-51311144db95) and start prompting.
+## 🙋‍♂️ About Me
 
-Changes made via Lovable will be committed automatically to this repo.
+I'm Kartik Vyas, a curious and creative developer from India 🇮🇳. I love building things that live on the internet — from simple landing pages to interactive web applications. I’m always exploring new technologies, improving my craft, and building cool stuff along the way. 💻✨
 
-**Use your preferred IDE**
+- 🔭 Currently learning: Web3, Solana, and Game Dev
+- 🎯 Goal: To create tech that empowers people
+- ⚡ Fun fact: I name my bugs before I fix them 🐞😂
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ⚙️ Tech I Work With
 
-Follow these steps:
+Here’s a glimpse of the technologies I’m familiar with:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- HTML5 / CSS3 / JavaScript
+- React.js / Next.js
+- Tailwind CSS / GSAP
+- TypeScript / Node.js
+- Solidity / Rust (Web3 🧱)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📬 Let’s Connect!
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+You can find me here – let’s collaborate or just say hi! 👇
+
+- 🐱 GitHub → [github.com/Kartikvyas1604](https://github.com/Kartikvyas1604)
+- 💼 LinkedIn → [linkedin.com/in/kartikvyas1604](https://www.linkedin.com/in/kartikvyas1604)
+- 🐦 Twitter/X → [twitter.com/Kartikvyas1604](https://twitter.com/Kartikvyas1604)
+
+---
+
+
+## 📦 Getting Started Locally
+
+```bash
+git clone https://github.com/Kartikvyas1604/your-portfolio.git
+cd your-portfolio
+npm install
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3eb8fd07-572f-4712-8f3e-51311144db95) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

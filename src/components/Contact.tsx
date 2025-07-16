@@ -222,7 +222,7 @@ export function Contact() {
               className="text-primary hover:underline inline-flex items-center gap-1"
             >
               <Mail className="h-4 w-4" />
-              kartik@example.com
+              vkartik013@gmail.com
             </a>
           </p>
         </div>

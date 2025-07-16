@@ -59,7 +59,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send notification email to Kartik
     const notificationEmailResponse = await resend.emails.send({
       from: "Portfolio Contact <noreply@kartikvyas.dev>",
-      to: ["kartik@example.com"], // Replace with actual email
+      to: ["vkartik013@gmail.com"],
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
