@@ -179,30 +179,3 @@ export function Hero() {
     </section>
   )
 }
-            <div
-              className="hero-image relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden group cursor-pointer hover-lift"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <img
-                src={avatarImg}
-                alt="Kartik Vyas - Avatar"
-                className={`absolute w-full h-full object-cover transition-opacity duration-500 ${
-                  isHovered ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <img
-                src={realImg}
-                alt="Kartik Vyas - Real"
-                className={`absolute w-full h-full object-cover transition-opacity duration-500 ${
-                  isHovered ? "opacity-100" : "opacity-0"
-                }`}
-              />
-              <div className="absolute inset-0 ring-4 ring-primary/20 rounded-full group-hover:ring-primary/40 transition-all duration-300" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-  )
-}
