@@ -7,7 +7,7 @@ Welcome to my personal portfolio website – a space where I introduce myself as
 
 ## 🌐 Live Portfolio
 
-🔗 [Visit My Website](https://your-portfolio-link.com)
+🔗 [Visit My Website](https://kartikvyas.vercel.app)
 
 ---
 
