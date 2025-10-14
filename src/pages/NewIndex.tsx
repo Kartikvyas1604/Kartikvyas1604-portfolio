@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/components/ThemeProvider"
 import { ThemeToggle } from "@/components/ThemeToggle"
 import { Hero } from "@/components/NewHero"
 import { About } from "@/components/NewAbout"
+import { Skills } from "@/components/Skills"
 import { Projects } from "@/components/NewProjects"
 import { Certifications } from "@/components/NewCertifications"
 import { Contact } from "@/components/Contact"
@@ -33,6 +34,12 @@ const Index = () => {
               About
             </a>
             <a 
+              href="#skills" 
+              className="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              Skills
+            </a>
+            <a 
               href="#projects" 
               className="text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
@@ -59,6 +66,7 @@ const Index = () => {
           </section>
           
           <About />
+          <Skills />
           <Projects />
           <Certifications />
           <Contact />
