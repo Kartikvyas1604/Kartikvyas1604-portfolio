@@ -5,21 +5,22 @@ import { Trophy, Award, Star, ExternalLink, Calendar, Users, Code, Zap } from "l
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import s7BadgeImg from "@/assets/S7-graduate-badge.png"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const achievements = [
   {
     id: 1,
-    title: "Solana Season 7 Graduate",
-    description: "Successfully completed the prestigious Solana Season 7 program, mastering advanced blockchain development, smart contracts, and DeFi protocols on Solana.",
+    title: "School of Solana by Ackee",
+    description: "Successfully graduated from the prestigious School of Solana by Ackee, mastering advanced blockchain development, smart contracts, and DeFi protocols on Solana.",
     date: "2024",
     category: "Blockchain",
-    icon: "🚀",
+    icon: "🎓",
     nftSignature: "4DtQ8GDwyPv8EdunScXoRLevFMM5RUKQmSz3FwuU3EHt33v6ToafyiMf5YNmoTT31Af5m654kwwa1Y7GG5qQX7M6",
     featured: true,
-    color: "from-purple-500 to-blue-500",
-    stats: { participants: "Only 100 selected globally", completion: "Top 10%", projects: "8 built" }
+    color: "from-blue-600 to-blue-800",
+    stats: { selectivity: "Top 13% graduated", program: "Elite Training", achievement: "Graduate Certificate" }
   },
   {
     id: 2,
@@ -29,7 +30,7 @@ const achievements = [
     category: "Open Source",
     icon: "❄️",
     featured: false,
-    color: "from-blue-500 to-cyan-500",
+    color: "from-blue-600 to-slate-600",
     stats: { repositories: "10+ preserved", impact: "Global", duration: "1000 years" }
   },
   {
@@ -40,7 +41,7 @@ const achievements = [
     category: "Development",
     icon: "💻",
     featured: true,
-    color: "from-green-500 to-emerald-500",
+    color: "from-blue-500 to-blue-700",
     stats: { projects: "100+", technologies: "50+", users: "10K+ served" }
   },
   {
@@ -51,7 +52,7 @@ const achievements = [
     category: "DeFi",
     icon: "🏦",
     featured: true,
-    color: "from-yellow-500 to-orange-500",
+    color: "from-slate-600 to-slate-800",
     stats: { tvl: "$5M+ handled", protocols: "5 built", users: "1K+ active" }
   },
   {
@@ -62,7 +63,7 @@ const achievements = [
     category: "AI/ML",
     icon: "🧠",
     featured: false,
-    color: "from-pink-500 to-rose-500",
+    color: "from-blue-600 to-indigo-600",
     stats: { models: "15+ trained", accuracy: "95%+ avg", applications: "Healthcare, Finance, Education" }
   },
   {
@@ -73,7 +74,7 @@ const achievements = [
     category: "Web Development",
     icon: "🌐",
     featured: false,
-    color: "from-indigo-500 to-purple-500",
+    color: "from-slate-500 to-slate-700",
     stats: { frameworks: "20+", cloud: "AWS, GCP, Azure", deployment: "Docker, K8s" }
   }
 ]
@@ -152,11 +153,10 @@ export function Achievements() {
       ref={achievementsRef} 
       className="py-32 bg-gradient-to-b from-background/50 to-background relative overflow-hidden"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-green-500/20 rounded-full blur-3xl animate-pulse delay-2000" />
+      {/* Clean Background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-32 left-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-32 right-32 w-80 h-80 bg-slate-500/20 rounded-full blur-3xl" />
       </div>
 
       <div className="container px-4 mx-auto relative z-10">
@@ -164,13 +164,13 @@ export function Achievements() {
         <div className="text-center mb-20">
           <div className="achievements-title space-y-6">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Trophy className="h-8 w-8 text-yellow-400" />
-              <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+              <Trophy className="h-8 w-8 text-blue-600" />
+              <h2 className="text-5xl md:text-6xl font-black text-slate-800 dark:text-white">
                 Achievements
               </h2>
-              <Award className="h-8 w-8 text-yellow-400" />
+              <Award className="h-8 w-8 text-blue-600" />
             </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Milestones and recognitions that mark my journey in technology, innovation, and community impact.
             </p>
           </div>
@@ -178,46 +178,41 @@ export function Achievements() {
 
         {/* Achievements Grid */}
         <div className="achievements-grid space-y-8">
-          {/* Featured NFT Achievement */}
+          {/* Featured Achievement */}
           <div className="nft-card mb-12">
-            <Card className="relative overflow-hidden border-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-indigo-500/10 backdrop-blur-md">
-              {/* Animated border */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 p-[2px] rounded-lg">
-                <div className="w-full h-full bg-black/90 rounded-lg" />
-              </div>
-              
+            <Card className="relative overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-2xl">
               <div className="relative z-10 p-8">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div className="space-y-6">
                     <div className="flex items-center gap-3">
-                      <div className="text-6xl">🚀</div>
+                      <div className="text-6xl">🎓</div>
                       <div>
-                        <h3 className="text-3xl font-bold text-white mb-2">
-                          Solana Season 7 Graduate
+                        <h3 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">
+                          School of Solana by Ackee
                         </h3>
-                        <Badge className="bg-gradient-to-r from-purple-500 to-blue-500 text-white">
+                        <Badge className="bg-blue-600 text-white">
                           <Star className="mr-1 h-3 w-3" />
-                          Elite Program
+                          Graduate Certificate
                         </Badge>
                       </div>
                     </div>
                     
-                    <p className="text-lg text-slate-300 leading-relaxed">
-                      Successfully completed the prestigious Solana Season 7 program, mastering advanced blockchain development, 
-                      smart contracts, and DeFi protocols. One of only 100 developers selected globally.
+                    <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                      Successfully graduated from the prestigious School of Solana by Ackee, mastering advanced blockchain development, 
+                      smart contracts, and DeFi protocols. Achieved graduation in the top 13% of applicants.
                     </p>
 
                     <div className="grid grid-cols-3 gap-4">
                       {Object.entries(achievements[0].stats).map(([key, value]) => (
-                        <div key={key} className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
-                          <div className="text-sm text-purple-300 font-semibold">{value}</div>
+                        <div key={key} className="text-center p-3 bg-slate-100 dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600">
+                          <div className="text-sm text-blue-600 dark:text-blue-400 font-semibold">{value}</div>
                         </div>
                       ))}
                     </div>
 
                     <Button
                       variant="outline"
-                      className="border-purple-400/50 hover:border-purple-400 hover:bg-purple-500/10 text-purple-300 hover:text-purple-200"
+                      className="border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-blue-600 dark:text-blue-400"
                       asChild
                     >
                       <a 
@@ -226,24 +221,22 @@ export function Achievements() {
                         rel="noopener noreferrer"
                       >
                         <ExternalLink className="mr-2 h-4 w-4" />
-                        View NFT Certificate
+                        View Certificate on Solana
                       </a>
                     </Button>
                   </div>
 
-                  {/* NFT Display */}
+                  {/* Certificate Badge Display */}
                   <div className="flex justify-center">
                     <div className="relative">
-                      <div className="w-64 h-64 bg-gradient-to-br from-purple-500 via-blue-500 to-indigo-500 rounded-2xl p-1 animate-spin-slow">
-                        <div className="w-full h-full bg-black rounded-2xl flex items-center justify-center">
-                          <div className="text-center text-white">
-                            <div className="text-6xl mb-4">🏆</div>
-                            <div className="text-lg font-bold">Solana S7</div>
-                            <div className="text-sm text-slate-400">Graduate NFT</div>
-                          </div>
-                        </div>
+                      <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl bg-white">
+                        <img 
+                          src={s7BadgeImg} 
+                          alt="School of Solana by Ackee Graduate Certificate" 
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-3xl blur-xl -z-10 animate-pulse" />
+                      <div className="absolute -inset-4 bg-blue-500/20 rounded-3xl blur-xl -z-10" />
                     </div>
                   </div>
                 </div>
@@ -256,17 +249,17 @@ export function Achievements() {
             {achievements.slice(1).map((achievement, index) => (
               <Card 
                 key={achievement.id}
-                className={`achievement-card group relative overflow-hidden border-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md hover:from-white/10 hover:to-white/15 transition-all duration-500 hover:scale-105 hover:-translate-y-2 ${
-                  achievement.featured ? 'ring-2 ring-yellow-400/30' : ''
+                className={`achievement-card group relative overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 transition-all duration-500 hover:scale-105 hover:-translate-y-2 shadow-lg hover:shadow-xl ${
+                  achievement.featured ? 'ring-2 ring-blue-400/30' : ''
                 }`}
               >
-                {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${achievement.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                {/* Simple hover overlay */}
+                <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Featured badge */}
                 {achievement.featured && (
                   <div className="absolute top-4 right-4 z-10">
-                    <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold">
+                    <Badge className="bg-blue-600 text-white font-semibold">
                       <Trophy className="mr-1 h-3 w-3" />
                       Featured
                     </Badge>
@@ -278,7 +271,7 @@ export function Achievements() {
                     {achievement.icon}
                   </div>
                   <div className="space-y-2">
-                    <CardTitle className="text-xl font-bold text-white group-hover:text-yellow-300 transition-colors">
+                    <CardTitle className="text-xl font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {achievement.title}
                     </CardTitle>
                     <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
@@ -292,7 +285,7 @@ export function Achievements() {
                 </CardHeader>
 
                 <CardContent className="relative z-10 space-y-4">
-                  <CardDescription className="text-sm text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                     {achievement.description}
                   </CardDescription>
 
@@ -300,8 +293,8 @@ export function Achievements() {
                   <div className="space-y-2">
                     {Object.entries(achievement.stats).map(([key, value]) => (
                       <div key={key} className="flex justify-between items-center text-xs">
-                        <span className="text-slate-400 capitalize">{key}:</span>
-                        <span className="text-white font-semibold">{value}</span>
+                        <span className="text-slate-500 dark:text-slate-400 capitalize">{key}:</span>
+                        <span className="text-slate-800 dark:text-white font-semibold">{value}</span>
                       </div>
                     ))}
                   </div>
@@ -320,12 +313,12 @@ export function Achievements() {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="achievements-title">
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
               Want to build something amazing together?
             </p>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:from-yellow-600 hover:via-orange-600 hover:to-red-600 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-orange-500/25 transition-all duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
               onClick={() => {
                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
               }}

@@ -3,10 +3,10 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Download, Github, Linkedin, Code, Sparkles, Zap, Trophy } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Meteors } from "./Meteors"
+
+import { SplineWrapper } from "./SplineWrapper"
 import avatarImg from "@/assets/avatar.jpg"
 import realImg from "@/assets/real.jpg"
-import Spline from '@splinetool/react-spline'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -77,6 +77,7 @@ export function Hero() {
   const [isHovered, setIsHovered] = useState(false)
   const [currentText, setCurrentText] = useState(0)
   const [showSpline, setShowSpline] = useState(true)
+  const [splineLoaded, setSplineLoaded] = useState(false)
 
   const techStack = [
     "Full Stack Developer",
@@ -177,21 +178,14 @@ export function Hero() {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Animated Background */}
-      <div className="hero-bg absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/50 to-slate-900">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000" />
+      {/* Clean Professional Background */}
+      <div className="hero-bg absolute inset-0 bg-slate-50 dark:bg-slate-900">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-32 left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl" />
+          <div className="absolute bottom-32 right-32 w-80 h-80 bg-slate-500/20 rounded-full blur-3xl" />
         </div>
       </div>
 
-      {/* Floating Orbs */}
-      <div className="floating-orb absolute top-20 right-20 w-4 h-4 bg-blue-400 rounded-full blur-sm opacity-60" />
-      <div className="floating-orb absolute bottom-32 left-16 w-6 h-6 bg-purple-400 rounded-full blur-sm opacity-60" />
-      <div className="floating-orb absolute top-1/3 left-1/4 w-3 h-3 bg-pink-400 rounded-full blur-sm opacity-60" />
-      
-      <Meteors number={25} />
       <FloatingTechIcons />
       
       <div className="container px-4 mx-auto relative z-10">
@@ -201,7 +195,7 @@ export function Hero() {
             <div className="space-y-4">
               <h1 className="hero-text text-5xl md:text-7xl font-black leading-tight">
                 Hey, I'm{" "}
-                <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient-x">
+                <span className="text-blue-600 dark:text-blue-400">
                   Kartik Vyas
                 </span>
               </h1>
@@ -224,11 +218,11 @@ export function Hero() {
               </div>
             </div>
 
-            <p className="hero-text text-xl text-slate-400 max-w-2xl leading-relaxed">
+            <p className="hero-text text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
               Passionate developer crafting innovative solutions at the intersection of{" "}
-              <span className="text-blue-400 font-semibold">Web3</span>,{" "}
-              <span className="text-purple-400 font-semibold">AI</span>, and{" "}
-              <span className="text-pink-400 font-semibold">cutting-edge tech</span>.
+              <span className="text-blue-600 dark:text-blue-400 font-semibold">Web3</span>,{" "}
+              <span className="text-slate-700 dark:text-slate-200 font-semibold">AI</span>, and{" "}
+              <span className="text-blue-700 dark:text-blue-300 font-semibold">cutting-edge tech</span>.
               Building the future, one line of code at a time.
             </p>
 
@@ -252,7 +246,7 @@ export function Hero() {
               <div className="hero-button flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 text-white font-semibold px-8 py-4 text-lg"
+                  className="bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-blue-500/25 text-white font-semibold px-8 py-4 text-lg"
                   asChild
                 >
                   <a href="https://drive.google.com/uc?export=download&id=123XJ8BEqMeBl8tpMJZ9oVUCMfqpqPR1B" download>
@@ -264,7 +258,7 @@ export function Hero() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-white/20 hover:border-white/40 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 text-white font-semibold px-8 py-4 text-lg"
+                  className="border-2 border-slate-300 dark:border-slate-600 hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-300 text-slate-700 dark:text-slate-200 font-semibold px-8 py-4 text-lg"
                   onClick={() => {
                     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
                   }}
@@ -329,18 +323,24 @@ export function Hero() {
           {/* Right side - Enhanced Profile with 3D */}
           <div className="flex justify-center lg:justify-end relative">
             {/* Spline 3D Background */}
-            {showSpline && (
-              <div 
-                ref={splineRef}
-                className="absolute inset-0 w-full h-full opacity-30"
-                style={{ zIndex: 1 }}
-              >
-                <Spline 
-                  scene="https://prod.spline.design/6Ej1mL8GMZyYd8O8/scene.splinecode"
-                  onError={() => setShowSpline(false)}
-                />
-              </div>
-            )}
+            <div 
+              ref={splineRef}
+              className="absolute inset-0 w-full h-full opacity-30"
+              style={{ zIndex: 1 }}
+            >
+              <SplineWrapper 
+                scene="https://prod.spline.design/6Ej1mL8GMZyYd8O8/scene.splinecode"
+                onLoad={() => {
+                  console.log('3D model loaded successfully')
+                  setSplineLoaded(true)
+                }}
+                onError={() => {
+                  console.warn('3D model failed to load, showing fallback animation')
+                  setShowSpline(false)
+                  setSplineLoaded(true) // Stop loading state
+                }}
+              />
+            </div>
             
             <div
               ref={imageRef}
@@ -349,9 +349,9 @@ export function Hero() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              {/* Animated border */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-1 animate-spin-slow">
-                <div className="w-full h-full rounded-full bg-slate-900" />
+              {/* Professional border */}
+              <div className="absolute inset-0 rounded-full bg-blue-600 p-1">
+                <div className="w-full h-full rounded-full bg-white dark:bg-slate-900" />
               </div>
               
               {/* Image container */}
@@ -373,12 +373,7 @@ export function Hero() {
               </div>
               
               {/* Hover effects */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-              
-              {/* Floating particles around image */}
-              <div className="absolute -top-4 -left-4 w-3 h-3 bg-blue-400 rounded-full animate-ping" />
-              <div className="absolute -bottom-4 -right-4 w-2 h-2 bg-purple-400 rounded-full animate-ping delay-1000" />
-              <div className="absolute -top-2 -right-6 w-2 h-2 bg-pink-400 rounded-full animate-ping delay-2000" />
+              <div className="absolute inset-0 rounded-full bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-all duration-300" />
             </div>
           </div>
         </div>

@@ -205,11 +205,11 @@ export function Projects() {
   }
 
   return (
-    <section id="projects" ref={projectsRef} className="py-32 bg-gradient-to-b from-background to-background/50 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+    <section id="projects" ref={projectsRef} className="py-32 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
+      {/* Clean Background */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-32 right-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-32 left-32 w-80 h-80 bg-slate-500/20 rounded-full blur-3xl" />
       </div>
 
       <div className="container px-4 mx-auto relative z-10">
@@ -217,13 +217,13 @@ export function Projects() {
         <div className="text-center mb-16">
           <div className="project-title space-y-6">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Code2 className="h-8 w-8 text-blue-400" />
-              <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <Code2 className="h-8 w-8 text-blue-600" />
+              <h2 className="text-5xl md:text-6xl font-black text-slate-800 dark:text-white">
                 Featured Projects
               </h2>
-              <Sparkles className="h-8 w-8 text-purple-400" />
+              <Sparkles className="h-8 w-8 text-blue-600" />
             </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Showcase of innovative solutions spanning AI, blockchain, web development, and beyond. 
               Each project represents cutting-edge technology and creative problem-solving.
             </p>
@@ -232,16 +232,16 @@ export function Projects() {
           {/* Project Stats */}
           <div className="project-title grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-12 mb-16">
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Total Projects</div>
+              <div className="text-4xl font-bold text-slate-800 dark:text-white mb-2">50+</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400">Total Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">100K+</div>
-              <div className="text-sm text-muted-foreground">Lines of Code</div>
+              <div className="text-4xl font-bold text-slate-800 dark:text-white mb-2">100K+</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400">Lines of Code</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">25+</div>
-              <div className="text-sm text-muted-foreground">Technologies</div>
+              <div className="text-4xl font-bold text-slate-800 dark:text-white mb-2">25+</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400">Technologies</div>
             </div>
           </div>
         </div>

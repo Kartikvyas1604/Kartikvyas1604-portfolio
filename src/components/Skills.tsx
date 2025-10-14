@@ -12,12 +12,12 @@ const skillCategories = [
   {
     title: "Programming Languages",
     skills: [
-      { name: "JavaScript", level: 95, color: "from-yellow-400 to-yellow-600", experience: "4+ years" },
-      { name: "TypeScript", level: 90, color: "from-blue-400 to-blue-600", experience: "3+ years" },
-      { name: "Python", level: 88, color: "from-green-400 to-green-600", experience: "3+ years" },
-      { name: "Rust", level: 82, color: "from-orange-400 to-orange-600", experience: "2+ years" },
-      { name: "Solidity", level: 85, color: "from-purple-400 to-purple-600", experience: "2+ years" },
-      { name: "C#", level: 75, color: "from-indigo-400 to-indigo-600", experience: "2+ years" }
+      { name: "JavaScript", level: 95, color: "text-blue-600", experience: "4+ years" },
+      { name: "TypeScript", level: 90, color: "text-blue-700", experience: "3+ years" },
+      { name: "Python", level: 88, color: "text-slate-600", experience: "3+ years" },
+      { name: "Rust", level: 82, color: "text-slate-700", experience: "2+ years" },
+      { name: "Solidity", level: 85, color: "text-blue-800", experience: "2+ years" },
+      { name: "C#", level: 75, color: "text-slate-800", experience: "2+ years" }
     ],
     icon: Code,
     description: "Mastery in modern programming languages for diverse applications"
@@ -25,12 +25,12 @@ const skillCategories = [
   {
     title: "Frontend & Frameworks",
     skills: [
-      { name: "React", level: 95, color: "from-cyan-400 to-cyan-600", experience: "4+ years" },
-      { name: "Next.js", level: 90, color: "from-gray-700 to-gray-900", experience: "3+ years" },
-      { name: "React Native", level: 85, color: "from-blue-400 to-blue-600", experience: "2+ years" },
-      { name: "Vue.js", level: 80, color: "from-green-400 to-green-600", experience: "2+ years" },
-      { name: "Three.js", level: 75, color: "from-purple-400 to-purple-600", experience: "1+ years" },
-      { name: "GSAP", level: 85, color: "from-pink-400 to-pink-600", experience: "2+ years" }
+      { name: "React", level: 95, color: "text-blue-600", experience: "4+ years" },
+      { name: "Next.js", level: 90, color: "text-slate-700", experience: "3+ years" },
+      { name: "React Native", level: 85, color: "text-blue-700", experience: "2+ years" },
+      { name: "Vue.js", level: 80, color: "text-slate-600", experience: "2+ years" },
+      { name: "Three.js", level: 75, color: "text-blue-800", experience: "1+ years" },
+      { name: "GSAP", level: 85, color: "text-slate-800", experience: "2+ years" }
     ],
     icon: Sparkles,
     description: "Modern frontend technologies and animation libraries"
@@ -38,12 +38,12 @@ const skillCategories = [
   {
     title: "Blockchain & Web3",
     skills: [
-      { name: "Solana", level: 92, color: "from-purple-400 to-purple-600", experience: "2+ years" },
-      { name: "Ethereum", level: 88, color: "from-blue-400 to-blue-600", experience: "3+ years" },
-      { name: "Web3.js", level: 90, color: "from-orange-400 to-orange-600", experience: "3+ years" },
-      { name: "Anchor", level: 85, color: "from-red-400 to-red-600", experience: "2+ years" },
-      { name: "Smart Contracts", level: 87, color: "from-green-400 to-green-600", experience: "2+ years" },
-      { name: "DeFi Protocols", level: 83, color: "from-yellow-400 to-yellow-600", experience: "2+ years" }
+      { name: "Solana", level: 92, color: "text-blue-600", experience: "2+ years" },
+      { name: "Ethereum", level: 88, color: "text-blue-700", experience: "3+ years" },
+      { name: "Web3.js", level: 90, color: "text-slate-600", experience: "3+ years" },
+      { name: "Anchor", level: 85, color: "text-slate-700", experience: "2+ years" },
+      { name: "Smart Contracts", level: 87, color: "text-blue-800", experience: "2+ years" },
+      { name: "DeFi Protocols", level: 83, color: "text-slate-800", experience: "2+ years" }
     ],
     icon: Zap,
     description: "Cutting-edge blockchain development and DeFi expertise"
@@ -51,12 +51,12 @@ const skillCategories = [
   {
     title: "Backend & Database",
     skills: [
-      { name: "Node.js", level: 92, color: "from-green-400 to-green-600", experience: "4+ years" },
-      { name: "Express.js", level: 90, color: "from-gray-600 to-gray-800", experience: "4+ years" },
-      { name: "FastAPI", level: 85, color: "from-teal-400 to-teal-600", experience: "2+ years" },
-      { name: "PostgreSQL", level: 88, color: "from-blue-400 to-blue-600", experience: "3+ years" },
-      { name: "MongoDB", level: 85, color: "from-green-400 to-green-600", experience: "3+ years" },
-      { name: "Supabase", level: 90, color: "from-emerald-400 to-emerald-600", experience: "2+ years" }
+      { name: "Node.js", level: 92, color: "text-blue-600", experience: "4+ years" },
+      { name: "Express.js", level: 90, color: "text-slate-700", experience: "4+ years" },
+      { name: "FastAPI", level: 85, color: "text-blue-700", experience: "2+ years" },
+      { name: "PostgreSQL", level: 88, color: "text-slate-600", experience: "3+ years" },
+      { name: "MongoDB", level: 85, color: "text-blue-800", experience: "3+ years" },
+      { name: "Supabase", level: 90, color: "text-slate-800", experience: "2+ years" }
     ],
     icon: Database,
     description: "Robust backend systems and database management"
@@ -64,12 +64,12 @@ const skillCategories = [
   {
     title: "Cloud & DevOps",
     skills: [
-      { name: "AWS", level: 82, color: "from-orange-400 to-orange-600", experience: "2+ years" },
-      { name: "Docker", level: 85, color: "from-blue-400 to-blue-600", experience: "3+ years" },
-      { name: "Kubernetes", level: 75, color: "from-purple-400 to-purple-600", experience: "1+ years" },
-      { name: "Vercel", level: 90, color: "from-gray-700 to-gray-900", experience: "3+ years" },
-      { name: "GitHub Actions", level: 80, color: "from-gray-600 to-gray-800", experience: "2+ years" },
-      { name: "Redis", level: 78, color: "from-red-400 to-red-600", experience: "2+ years" }
+      { name: "AWS", level: 82, color: "text-blue-600", experience: "2+ years" },
+      { name: "Docker", level: 85, color: "text-blue-700", experience: "3+ years" },
+      { name: "Kubernetes", level: 75, color: "text-slate-600", experience: "1+ years" },
+      { name: "Vercel", level: 90, color: "text-slate-700", experience: "3+ years" },
+      { name: "GitHub Actions", level: 80, color: "text-blue-800", experience: "2+ years" },
+      { name: "Redis", level: 78, color: "text-slate-800", experience: "2+ years" }
     ],
     icon: Cloud,
     description: "Scalable cloud infrastructure and deployment automation"
@@ -77,12 +77,12 @@ const skillCategories = [
   {
     title: "AI/ML & Game Development",
     skills: [
-      { name: "TensorFlow", level: 80, color: "from-orange-400 to-orange-600", experience: "2+ years" },
-      { name: "PyTorch", level: 75, color: "from-red-400 to-red-600", experience: "1+ years" },
-      { name: "OpenAI API", level: 88, color: "from-green-400 to-green-600", experience: "2+ years" },
-      { name: "Unity", level: 78, color: "from-purple-400 to-purple-600", experience: "2+ years" },
-      { name: "Blender", level: 70, color: "from-blue-400 to-blue-600", experience: "1+ years" },
-      { name: "Machine Learning", level: 82, color: "from-pink-400 to-pink-600", experience: "2+ years" }
+      { name: "TensorFlow", level: 80, color: "text-blue-600", experience: "2+ years" },
+      { name: "PyTorch", level: 75, color: "text-slate-700", experience: "1+ years" },
+      { name: "OpenAI API", level: 88, color: "text-blue-700", experience: "2+ years" },
+      { name: "Unity", level: 78, color: "text-slate-600", experience: "2+ years" },
+      { name: "Blender", level: 70, color: "text-blue-800", experience: "1+ years" },
+      { name: "Machine Learning", level: 82, color: "text-slate-800", experience: "2+ years" }
     ],
     icon: Brain,
     description: "Artificial intelligence and immersive game experiences"
