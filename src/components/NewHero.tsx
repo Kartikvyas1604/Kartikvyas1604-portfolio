@@ -72,11 +72,11 @@ export function Hero() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-100/20 to-indigo-100/20 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container px-6 mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container px-4 md:px-6 mx-auto relative z-10 pt-20 md:pt-0">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Content */}
-          <div className="hero-content space-y-8 text-center lg:text-left">
+          <div className="hero-content space-y-6 md:space-y-8 text-center lg:text-left">
             
             {/* Status Badge */}
             <Badge variant="outline" className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
@@ -85,18 +85,18 @@ export function Hero() {
             </Badge>
 
             {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <div className="space-y-3 md:space-y-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
                 <span className="text-slate-900 dark:text-white">Hi, I'm </span>
                 <span className="text-blue-600 dark:text-blue-400">Kartik Vyas</span>
               </h1>
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-slate-700 dark:text-slate-300">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-slate-700 dark:text-slate-300">
                 Full Stack Developer & Blockchain Engineer
               </h2>
             </div>
 
             {/* Description */}
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+            <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed px-2 lg:px-0">
               Passionate about building innovative web applications and blockchain solutions. 
               Specialized in modern JavaScript frameworks, smart contract development, and scalable cloud architectures.
             </p>
@@ -118,37 +118,37 @@ export function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start px-4 lg:px-0">
               <Button 
-                size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                size="default"
+                className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-blue-500/25 transition-all duration-300 w-full sm:w-auto"
                 asChild
               >
                 <a href="#projects">
-                  <Code2 className="w-5 h-5 mr-2" />
+                  <Code2 className="w-4 h-4 mr-2" />
                   View My Work
                 </a>
               </Button>
               
               <Button 
                 variant="outline" 
-                size="lg"
-                className="border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
+                size="default"
+                className="border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 w-full sm:w-auto"
                 asChild
               >
                 <a href="/resume.pdf" download>
-                  <Download className="w-5 h-5 mr-2" />
+                  <Download className="w-4 h-4 mr-2" />
                   Download Resume
                 </a>
               </Button>
             </div>
 
             {/* Contact Links */}
-            <div className="flex gap-4 justify-center lg:justify-start">
+            <div className="flex gap-3 md:gap-4 justify-center lg:justify-start">
               <Button
                 variant="outline"
                 size="sm"
-                className="w-12 h-12 p-0 rounded-full border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
+                className="w-10 h-10 md:w-12 md:h-12 p-0 rounded-full border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
                 asChild
               >
                 <a
@@ -157,14 +157,14 @@ export function Hero() {
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className="w-4 h-4 md:w-5 md:h-5" />
                 </a>
               </Button>
               
               <Button
                 variant="outline"
                 size="sm"
-                className="w-12 h-12 p-0 rounded-full border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
+                className="w-10 h-10 md:w-12 md:h-12 p-0 rounded-full border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
                 asChild
               >
                 <a
@@ -173,18 +173,18 @@ export function Hero() {
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
                 </a>
               </Button>
               
               <Button
                 variant="outline"
                 size="sm"
-                className="w-12 h-12 p-0 rounded-full border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
+                className="w-10 h-10 md:w-12 md:h-12 p-0 rounded-full border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
                 asChild
               >
                 <a href="mailto:kartikvyas1604@gmail.com" aria-label="Send Email">
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-4 h-4 md:w-5 md:h-5" />
                 </a>
               </Button>
             </div>
@@ -197,13 +197,13 @@ export function Hero() {
           </div>
 
           {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
             <div 
               ref={imageRef}
               className="hero-image relative group"
             >
               {/* Main Image */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-indigo-600 rounded-3xl transform rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
                 <div className="absolute inset-2 bg-white rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
                   <img
@@ -213,10 +213,10 @@ export function Hero() {
                   />
                 </div>
                 
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-bounce delay-1000"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-indigo-500 rounded-full animate-bounce delay-2000"></div>
-                <div className="absolute top-1/2 -right-8 w-4 h-4 bg-purple-500 rounded-full animate-pulse"></div>
+                {/* Floating Elements - Hidden on mobile */}
+                <div className="hidden md:block absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full animate-bounce delay-1000"></div>
+                <div className="hidden md:block absolute -bottom-4 -left-4 w-6 h-6 bg-indigo-500 rounded-full animate-bounce delay-2000"></div>
+                <div className="hidden md:block absolute top-1/2 -right-8 w-4 h-4 bg-purple-500 rounded-full animate-pulse"></div>
               </div>
             </div>
           </div>

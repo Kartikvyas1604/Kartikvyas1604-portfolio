@@ -186,7 +186,7 @@ export function Projects() {
     <section 
       id="projects" 
       ref={projectsRef} 
-      className="py-24 bg-slate-50 dark:bg-slate-800 relative overflow-hidden"
+      className="py-16 md:py-24 bg-slate-50 dark:bg-slate-800 relative overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 opacity-5">
@@ -194,31 +194,32 @@ export function Projects() {
         <div className="absolute bottom-32 right-32 w-80 h-80 bg-indigo-500 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container px-6 mx-auto relative z-10">
+      <div className="container px-4 md:px-6 mx-auto relative z-10">
         
         {/* Header */}
-        <div className="projects-title text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+        <div className="projects-title text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto px-4 md:px-0">
             A showcase of innovative solutions spanning DevOps automation, blockchain security, 
             DeFi protocols, and AI-powered applications that solve real-world problems.
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-12 px-4 md:px-0">
           {categories.map((category) => (
             <Button
               key={category}
               variant={filter === category ? "default" : "outline"}
               onClick={() => handleFilterChange(category)}
+              size="sm"
               className={`${
                 filter === category
                   ? "bg-blue-600 hover:bg-blue-700 text-white"
                   : "border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700"
-              } transition-all duration-300`}
+              } transition-all duration-300 text-xs md:text-sm px-2 md:px-3`}
             >
               {category} ({category === "All" ? projects.length : projects.filter(p => p.category === category).length})
             </Button>
@@ -226,7 +227,7 @@ export function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="projects-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {displayedProjects.map((project, index) => (
             <Card 
               key={project.id}

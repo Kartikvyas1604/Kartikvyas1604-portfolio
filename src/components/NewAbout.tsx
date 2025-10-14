@@ -106,7 +106,7 @@ export function About() {
     <section 
       id="about" 
       ref={aboutRef} 
-      className="py-24 bg-white dark:bg-slate-900 relative overflow-hidden"
+      className="py-16 md:py-24 bg-white dark:bg-slate-900 relative overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -114,29 +114,29 @@ export function About() {
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-500 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container px-6 mx-auto relative z-10">
+      <div className="container px-4 md:px-6 mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="about-title text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+        <div className="about-title text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
             About Me
           </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto px-4 md:px-0">
             Passionate developer with expertise in modern web technologies and blockchain development.
             I create scalable solutions that bridge the gap between traditional web and decentralized systems.
           </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+        <div className="stats-grid grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-16 md:mb-20">
           {stats.map((stat, index) => (
             <Card key={index} className="stat-card text-center border-0 shadow-lg bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <stat.icon className={`w-8 h-8 mx-auto mb-3 ${stat.color}`} />
-                <div className="text-3xl font-bold text-slate-900 dark:text-white mb-1">
+              <CardContent className="p-4 md:p-6">
+                <stat.icon className={`w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 md:mb-3 ${stat.color}`} />
+                <div className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-slate-600 dark:text-slate-400">
+                <div className="text-xs md:text-sm text-slate-600 dark:text-slate-400">
                   {stat.label}
                 </div>
               </CardContent>
@@ -190,55 +190,55 @@ export function About() {
         </div>
 
         {/* Skills Summary */}
-        <div className="mt-20 text-center">
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">
+        <div className="mt-16 md:mt-20 text-center">
+          <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-6 md:mb-8">
             Core Competencies
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
             
             <Card className="border-0 shadow-lg bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm">
-              <CardContent className="p-6 text-center">
-                <Code2 className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+              <CardContent className="p-4 md:p-6 text-center">
+                <Code2 className="w-8 h-8 md:w-12 md:h-12 text-blue-600 mx-auto mb-3 md:mb-4" />
+                <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-white mb-2">
                   Frontend Development
                 </h4>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">
+                <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm">
                   React, Next.js, TypeScript, Tailwind CSS, GSAP animations
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm">
-              <CardContent className="p-6 text-center">
-                <Briefcase className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+              <CardContent className="p-4 md:p-6 text-center">
+                <Briefcase className="w-8 h-8 md:w-12 md:h-12 text-green-600 mx-auto mb-3 md:mb-4" />
+                <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-white mb-2">
                   Backend & DevOps
                 </h4>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">
+                <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm">
                   Node.js, Python, Docker, Kubernetes, CI/CD, Monitoring
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm">
-              <CardContent className="p-6 text-center">
-                <Globe className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+              <CardContent className="p-4 md:p-6 text-center">
+                <Globe className="w-8 h-8 md:w-12 md:h-12 text-purple-600 mx-auto mb-3 md:mb-4" />
+                <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-white mb-2">
                   Blockchain Development
                 </h4>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">
+                <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm">
                   Solana, Ethereum, Smart Contracts, DeFi, Multi-chain
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm">
-              <CardContent className="p-6 text-center">
-                <Award className="w-12 h-12 text-red-600 mx-auto mb-4" />
-                <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+              <CardContent className="p-4 md:p-6 text-center">
+                <Award className="w-8 h-8 md:w-12 md:h-12 text-red-600 mx-auto mb-3 md:mb-4" />
+                <h4 className="text-base md:text-lg font-semibold text-slate-900 dark:text-white mb-2">
                   Security & Analysis
                 </h4>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">
+                <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm">
                   Smart Contract Auditing, Rugpull Detection, Risk Assessment
                 </p>
               </CardContent>

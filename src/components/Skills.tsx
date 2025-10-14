@@ -154,15 +154,15 @@ export function Skills() {
   }, [])
 
   return (
-    <section id="skills" ref={skillsRef} className="py-20 bg-slate-50 dark:bg-slate-900">
-      <div className="container px-4 mx-auto">
+    <section id="skills" ref={skillsRef} className="py-16 md:py-20 bg-slate-50 dark:bg-slate-900">
+      <div className="container px-4 md:px-6 mx-auto">
         {/* Professional Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <div className="skills-title space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white">
               Skills & Technologies
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto px-4 md:px-0">
               A comprehensive overview of technologies and frameworks I work with, 
               developed through hands-on experience and continuous learning.
             </p>
@@ -170,7 +170,7 @@ export function Skills() {
         </div>
         
         {/* Professional Skills Grid */}
-        <div className="skills-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {skillCategories.map((category, categoryIndex) => {
             const IconComponent = category.icon
             return (
@@ -180,29 +180,29 @@ export function Skills() {
                 onMouseEnter={() => setHoveredCategory(categoryIndex)}
                 onMouseLeave={() => setHoveredCategory(null)}
               >
-                <CardHeader className="text-center pb-4">
-                  <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors duration-300">
-                      <IconComponent className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                <CardHeader className="text-center pb-3 md:pb-4">
+                  <div className="flex justify-center mb-3 md:mb-4">
+                    <div className="p-2 md:p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors duration-300">
+                      <IconComponent className="h-5 w-5 md:h-6 md:w-6 text-blue-600 dark:text-blue-400" />
                     </div>
                   </div>
-                  <CardTitle className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                  <CardTitle className="text-lg md:text-xl font-semibold text-slate-900 dark:text-white mb-2">
                     {category.title}
                   </CardTitle>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">{category.description}</p>
+                  <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400">{category.description}</p>
                 </CardHeader>
                 
-                <CardContent className="space-y-3">
+                <CardContent className="space-y-2 md:space-y-3">
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skill.name}
-                      className="skill-item space-y-2 p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200"
+                      className="skill-item space-y-1 md:space-y-2 p-2 md:p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200"
                     >
                       <div className="flex justify-between items-center">
-                        <span className="text-slate-900 dark:text-white font-medium text-sm">{skill.name}</span>
+                        <span className="text-slate-900 dark:text-white font-medium text-xs md:text-sm">{skill.name}</span>
                         <Badge 
                           variant="outline" 
-                          className="text-xs border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300"
+                          className="text-xs border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-xs"
                         >
                           {skill.experience}
                         </Badge>
@@ -215,7 +215,7 @@ export function Skills() {
                         </div>
                         <Progress 
                           value={hoveredCategory === categoryIndex ? skill.level : 0} 
-                          className="h-2"
+                          className="h-1.5 md:h-2"
                         />
                       </div>
                     </div>
@@ -227,23 +227,23 @@ export function Skills() {
         </div>
 
         {/* Skills Summary */}
-        <div className="skills-title mt-16 text-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">50+</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400">Technologies Mastered</div>
+        <div className="skills-title mt-12 md:mt-16 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-3 md:p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
+              <div className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-1 md:mb-2">50+</div>
+              <div className="text-xs md:text-sm text-slate-600 dark:text-slate-400">Technologies Mastered</div>
             </div>
-            <div className="text-center p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">4+</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400">Years Experience</div>
+            <div className="text-center p-3 md:p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
+              <div className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-1 md:mb-2">4+</div>
+              <div className="text-xs md:text-sm text-slate-600 dark:text-slate-400">Years Experience</div>
             </div>
-            <div className="text-center p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">35+</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400">Projects Completed</div>
+            <div className="text-center p-3 md:p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
+              <div className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-1 md:mb-2">35+</div>
+              <div className="text-xs md:text-sm text-slate-600 dark:text-slate-400">Projects Completed</div>
             </div>
-            <div className="text-center p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
-              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">∞</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400">Learning Mindset</div>
+            <div className="text-center p-3 md:p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
+              <div className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-1 md:mb-2">∞</div>
+              <div className="text-xs md:text-sm text-slate-600 dark:text-slate-400">Learning Mindset</div>
             </div>
           </div>
         </div>
