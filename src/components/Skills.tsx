@@ -95,19 +95,18 @@ export function Skills() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Enhanced title animation
+      // Professional title animation
       gsap.fromTo(
         ".skills-title",
-        { y: 80, opacity: 0, scale: 0.8 },
+        { y: 50, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          scale: 1,
-          duration: 1.2,
-          ease: "power4.out",
+          duration: 1,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: skillsRef.current,
-            start: "top 85%",
+            start: "top 80%",
             toggleActions: "play none none reverse",
           },
         }
@@ -116,17 +115,13 @@ export function Skills() {
       // Staggered category animations
       gsap.fromTo(
         ".skill-category",
-        { y: 100, opacity: 0, rotationX: 15 },
+        { y: 60, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          rotationX: 0,
-          duration: 1,
-          ease: "power3.out",
-          stagger: {
-            amount: 0.8,
-            from: "start"
-          },
+          duration: 0.8,
+          ease: "power2.out",
+          stagger: 0.1,
           scrollTrigger: {
             trigger: ".skills-grid",
             start: "top 70%",
@@ -138,13 +133,13 @@ export function Skills() {
       // Individual skill animations
       gsap.fromTo(
         ".skill-item",
-        { x: -30, opacity: 0 },
+        { x: -20, opacity: 0 },
         {
           x: 0,
           opacity: 1,
-          duration: 0.6,
+          duration: 0.5,
           ease: "power2.out",
-          stagger: 0.05,
+          stagger: 0.03,
           scrollTrigger: {
             trigger: ".skills-grid",
             start: "top 60%",
@@ -159,69 +154,55 @@ export function Skills() {
   }, [])
 
   return (
-    <section id="skills" ref={skillsRef} className="py-32 bg-gradient-to-b from-background to-background/50 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-2000" />
-      </div>
-
-      <div className="container px-4 mx-auto relative z-10">
-        {/* Enhanced Header */}
-        <div className="text-center mb-20">
-          <div className="skills-title space-y-6">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Wrench className="h-8 w-8 text-cyan-400" />
-              <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                Skills & Technologies
-              </h2>
-              <Gamepad2 className="h-8 w-8 text-purple-400" />
-            </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A comprehensive arsenal of cutting-edge technologies and frameworks, 
-              honed through years of hands-on experience and continuous learning.
+    <section id="skills" ref={skillsRef} className="py-20 bg-slate-50 dark:bg-slate-900">
+      <div className="container px-4 mx-auto">
+        {/* Professional Header */}
+        <div className="text-center mb-16">
+          <div className="skills-title space-y-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
+              Skills & Technologies
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+              A comprehensive overview of technologies and frameworks I work with, 
+              developed through hands-on experience and continuous learning.
             </p>
           </div>
         </div>
         
-        {/* Enhanced Skills Grid */}
+        {/* Professional Skills Grid */}
         <div className="skills-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => {
             const IconComponent = category.icon
             return (
               <Card
                 key={category.title}
-                className="skill-category group relative overflow-hidden border-0 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md hover:from-white/10 hover:to-white/15 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+                className="skill-category group border-0 shadow-lg bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 onMouseEnter={() => setHoveredCategory(categoryIndex)}
                 onMouseLeave={() => setHoveredCategory(null)}
               >
-                {/* Animated background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <CardHeader className="relative z-10 text-center pb-4">
+                <CardHeader className="text-center pb-4">
                   <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="h-8 w-8 text-cyan-400" />
+                    <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors duration-300">
+                      <IconComponent className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                     </div>
                   </div>
-                  <CardTitle className="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-2">
+                  <CardTitle className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
                     {category.title}
                   </CardTitle>
-                  <p className="text-sm text-muted-foreground">{category.description}</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">{category.description}</p>
                 </CardHeader>
                 
-                <CardContent className="relative z-10 space-y-4">
+                <CardContent className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skill.name}
-                      className="skill-item space-y-2 p-3 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-all duration-200"
+                      className="skill-item space-y-2 p-3 bg-slate-50 dark:bg-slate-700/50 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200"
                     >
                       <div className="flex justify-between items-center">
-                        <span className="text-white font-medium text-sm">{skill.name}</span>
+                        <span className="text-slate-900 dark:text-white font-medium text-sm">{skill.name}</span>
                         <Badge 
                           variant="outline" 
-                          className="text-xs border-cyan-400/30 text-cyan-300"
+                          className="text-xs border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300"
                         >
                           {skill.experience}
                         </Badge>
@@ -229,8 +210,8 @@ export function Skills() {
                       
                       <div className="space-y-1">
                         <div className="flex justify-between text-xs">
-                          <span className="text-slate-400">Proficiency</span>
-                          <span className="text-white font-semibold">{skill.level}%</span>
+                          <span className="text-slate-500 dark:text-slate-400">Proficiency</span>
+                          <span className="text-slate-900 dark:text-white font-semibold">{skill.level}%</span>
                         </div>
                         <Progress 
                           value={hoveredCategory === categoryIndex ? skill.level : 0} 
@@ -240,35 +221,29 @@ export function Skills() {
                     </div>
                   ))}
                 </CardContent>
-
-                {/* Hover border effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400" />
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400" />
-                </div>
               </Card>
             )
           })}
         </div>
 
         {/* Skills Summary */}
-        <div className="skills-title mt-20 text-center">
+        <div className="skills-title mt-16 text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Technologies Mastered</div>
+            <div className="text-center p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
+              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">50+</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400">Technologies Mastered</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">4+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
+            <div className="text-center p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
+              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">4+</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400">Years Experience</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">100+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+            <div className="text-center p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
+              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">35+</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400">Projects Completed</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Learning Mindset</div>
+            <div className="text-center p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg backdrop-blur-sm">
+              <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">∞</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400">Learning Mindset</div>
             </div>
           </div>
         </div>
