@@ -136,7 +136,7 @@ export function Hero() {
                 className="border-2 border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 w-full sm:w-auto"
                 asChild
               >
-                <a href="https://drive.google.com/uc?export=download&id=1uXK69tJRSrsZDC4sq6viDhkSmLChdIJY" download>
+                <a href="https://drive.google.com/uc?export=download&id=1fiJEIgaxR-oRDYSiFS20vcCvkfvfQL5l" download>
                   <Download className="w-4 h-4 mr-2" />
                   Download Resume
                 </a>

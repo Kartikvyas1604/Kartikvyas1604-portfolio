@@ -249,7 +249,7 @@ export function Hero() {
                   className="bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-blue-500/25 text-white font-semibold px-8 py-4 text-lg"
                   asChild
                 >
-                  <a href="https://drive.google.com/uc?export=download&id=1uXK69tJRSrsZDC4sq6viDhkSmLChdIJY" download>
+                  <a href="https://drive.google.com/uc?export=download&id=1fiJEIgaxR-oRDYSiFS20vcCvkfvfQL5l" download>
 
                     <Download className="mr-2 h-5 w-5" />
                     Download Resume
