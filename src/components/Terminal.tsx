@@ -155,8 +155,8 @@ export function Terminal({ isOpen, onClose }: TerminalProps) {
     cv: () => {
       // Trigger actual CV download
       const link = document.createElement("a")
-      link.href = "/Kartik-Vyas-CV.pdf"
-      link.download = "Kartik-Vyas-CV.pdf"
+      link.href = "https://drive.google.com/uc?export=download&id=1uXK69tJRSrsZDC4sq6viDhkSmLChdIJY"
+      link.download = "Kartik-Vyas-Resume.pdf"
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
