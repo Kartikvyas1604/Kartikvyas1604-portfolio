@@ -1,31 +1,37 @@
 import { ThemeProvider } from "@/components/ThemeProvider"
-import { ThemeToggle } from "@/components/ThemeToggle"
-import { Hero } from "@/components/Hero"
-import { About } from "@/components/About"
-import { Projects } from "@/components/Projects"
-import { Achievements } from "@/components/Achievements"
-import { Skills } from "@/components/Skills"
-import { Contact } from "@/components/Contact"
+import { UltimateHero } from "@/components/UltimateHero"
+import { ImmersiveAbout } from "@/components/ImmersiveAbout"
+import { EpicProjects } from "@/components/EpicProjects"
+import { NextLevelContact } from "@/components/NextLevelContact"
 import { Footer } from "@/components/Footer"
-import { TerminalButton } from "@/components/Terminal"
+import { useEffect, useState } from "react"
 
 const Index = () => {
+  const [showContent, setShowContent] = useState(false)
+
+  useEffect(() => {
+    // Quick load without complex loading screen
+    const timer = setTimeout(() => {
+      setShowContent(true)
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
-      <div className="min-h-screen bg-background text-foreground">
-        <ThemeToggle />
-        <TerminalButton />
-        
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Achievements />
-          <Skills />
-          <Contact />
-        </main>
-        
-        <Footer />
+    <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
+      <div className="min-h-screen bg-slate-950 text-white relative overflow-x-hidden">
+        {/* Main content */}
+        <div className={`transition-opacity duration-1000 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
+          <main>
+            <UltimateHero />
+            <ImmersiveAbout />
+            <EpicProjects />
+            <NextLevelContact />
+          </main>
+          
+          <Footer />
+        </div>
       </div>
     </ThemeProvider>
   );
